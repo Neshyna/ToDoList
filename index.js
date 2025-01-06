@@ -1,5 +1,6 @@
 const input = document.getElementById("todoInput");
 const addButton = document.getElementById("addButton");
+const deleteButton = document.getElementById("deleteButton");
 const todoList = document.getElementById("todoList");
 
 const addPoint = () => {
@@ -19,6 +20,11 @@ const addPoint = () => {
   input.value = "";
 };
 
+const deleteAllPoints = () => {
+  todoList.innerHTML = "";
+};
+
 addButton.addEventListener("click", addPoint);
+deleteButton.addEventListener("click", deleteAllPoints);
 
 
